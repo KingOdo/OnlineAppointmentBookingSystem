@@ -28,14 +28,14 @@ $result = mysqli_query($conn, $sql);
     <h2>Appointment System</h2>
     <div>
         <a href="dashboard.php">Dashboard</a>
-        <a href="book_appointment.php">Book Appointment</a>
-        <a href="my_appointments.php">My Appointments</a>
+        <a href="bookappointment.php">Book Appointment</a>
+        <a href="myappointment.php">My Appointments</a>
         <a href="logout.php">Logout</a>
     </div>
 </nav>
 
 <div class="table-container">
-    <h2>My Booked Appointments</h2>
+    <h2>View Booked Appointments</h2>
 
     <table>
         <tr>

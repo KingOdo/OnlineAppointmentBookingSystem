@@ -18,6 +18,6 @@ if (isset($_GET['id'])) {
     mysqli_query($conn, $sql);
 }
 
-header("Location: my_appointments.php");
+header("Location: myappointments.php");
 exit();
 ?>
