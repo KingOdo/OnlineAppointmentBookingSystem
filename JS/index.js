@@ -53,7 +53,12 @@ function validateLoginForm() {
 function validateAppointmentForm() {
     const date = document.getElementById("appointment_date").value;
     const time = document.getElementById("appointment_time").value;
-    const reason = document.getElementById("reason").value.trim();
+    const reason = document.getElementById("reason").value;
+
+    if (reason === "") {
+        alert("Please select an appointment type.");
+        return false;
+    }
 
     if (date === "") {
         alert("Please select an appointment date.");
@@ -62,11 +67,6 @@ function validateAppointmentForm() {
 
     if (time === "") {
         alert("Please select an appointment time.");
-        return false;
-    }
-
-    if (reason === "") {
-        alert("Please enter the reason for the appointment.");
         return false;
     }
 
@@ -82,3 +82,4 @@ function validateAppointmentForm() {
 
     return true;
 }
+//

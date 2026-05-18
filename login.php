@@ -36,30 +36,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign In</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/validation.js" defer></script>
+    <title>Sign In | Booking System</title>
+    <link rel="stylesheet" href="css/style.css?v=10">
+    <script src="js/index.js" defer></script>
 </head>
 <body>
 
-<div class="form-container">
-    <form method="POST" onsubmit="return validateLoginForm()" class="form-card">
-        <h2>Sign In</h2>
+<div class="login-page">
 
-        <?php if ($message != ""): ?>
-            <p class="error"><?php echo $message; ?></p>
-        <?php endif; ?>
+    <div class="login-image-section">
+        <img src="images/onlinebooking.jpg" alt="Online booking system">
 
-        <label>Email</label>
-        <input type="email" name="email" id="login_email" placeholder="Enter your email">
+        <div class="login-overlay"></div>
 
-        <label>Password</label>
-        <input type="password" name="password" id="login_password" placeholder="Enter password">
+        <div class="login-image-text">
+            <h1>Welcome Back</h1>
+            <p>
+                Sign in to manage your bookings, view your appointments, and keep your schedule organized.
+            </p>
+        </div>
+    </div>
 
-        <button type="submit">Sign In</button>
+    <div class="login-form-section">
+        <form method="POST" onsubmit="return validateLoginForm()" class="login-card">
+            <div class="login-header">
+                <h2>Sign In</h2>
+                <p>Access your appointment dashboard</p>
+            </div>
 
-        <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
-    </form>
+            <?php if ($message != ""): ?>
+                <p class="error"><?php echo $message; ?></p>
+            <?php endif; ?>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" id="login_email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" id="login_password" placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="primary-btn">Sign In</button>
+
+            <p class="switch-text">
+                Don't have an account? <a href="signup.php">Create one</a>
+            </p>
+        </form>
+    </div>
+
 </div>
 
 </body>
